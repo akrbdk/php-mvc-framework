@@ -7,8 +7,8 @@ namespace App\Core;
  */
 class Router
 {
-    private Request $request;
     protected array $routes = [];
+    private Request $request;
 
     /**
      * @param Request $request
@@ -27,48 +27,58 @@ class Router
     {
         $this->routes['post'][$path] = $callback;
     }
+
     public function resolve()
     {
         $path = $this->request->getPath();
-        $method = $this->request->getMethod();
+        $method = $this->request->method();
         $callback = $this->routes[$method][$path] ?? false;
 
-        if($callback === false){
+        if ($callback === false) {
             Application::$app->response->setStatusCode(404);
             return $this->renderView('_404');
         }
 
-        if(is_string($callback)){
+        if (is_string($callback)) {
             return $this->renderView($callback);
         }
 
-        return call_user_func($callback);
+        if (is_array($callback)) {
+            Application::$app->controller = new $callback[0]();
+            $callback[0] = Application::$app->controller;
+        }
+
+        return call_user_func($callback, $this->request);
     }
 
-    public function renderView(string $view)
+    public function renderView(string $view, array $params = [])
     {
         $layoutContent = $this->layoutContent();
-        $viewContent = $this->renderOnlyView($view);
+        $viewContent = $this->renderOnlyView($view, $params);
         return str_replace('{{content}}', $viewContent, $layoutContent);
+    }
+
+    private function layoutContent()
+    {
+        $layout = Application::$app->controller->layout;
+        ob_start();
+        include_once Application::$ROOT_DIR . "/views/layouts/$layout.php";
+        return ob_get_clean();
+    }
+
+    private function renderOnlyView($view, array $params = [])
+    {
+        foreach ($params as $name => $value) {
+            $$name = $value;
+        }
+        ob_start();
+        include_once Application::$ROOT_DIR . "/views/$view.php";
+        return ob_get_clean();
     }
 
     private function renderContent(string $content)
     {
         $layoutContent = $this->layoutContent();
         return str_replace('{{content}}', $content, $layoutContent);
-    }
-
-    private function layoutContent()
-    {
-        ob_start();
-        include_once Application::$ROOT_DIR . '/views/layouts/main.php';
-        return ob_get_clean();
-    }
-
-    private function renderOnlyView($view)
-    {
-        ob_start();
-        include_once Application::$ROOT_DIR . "/views/$view.php";
-        return ob_get_clean();
     }
 }
