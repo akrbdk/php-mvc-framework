@@ -50,4 +50,9 @@ class Request
     {
         return $this->method() === 'post';
     }
+
+    public function redirect(string $url): void
+    {
+        header('Location: ' . $url);
+    }
 }

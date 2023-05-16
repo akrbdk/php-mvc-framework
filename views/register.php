@@ -1,13 +1,15 @@
 <h1>Create an account</h1>
 
-<?php $form = \App\Core\Form\Form::begin('', 'post') ?>
+<?php use App\Core\Form\Form;
 
-    <?php echo $form->field($model, 'firstname') ?>
-    <?php echo $form->field($model, 'lastname') ?>
-    <?php echo $form->field($model, 'email') ?>
-    <?php echo $form->field($model, 'password')->passwordField() ?>
-    <?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
+$form = Form::begin('', 'post') ?>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+<?php echo $form->field($model, 'firstname') ?>
+<?php echo $form->field($model, 'lastname') ?>
+<?php echo $form->field($model, 'email') ?>
+<?php echo $form->field($model, 'password')->passwordField() ?>
+<?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
 
-<?php echo \App\Core\Form\Form::end() ?>
+<button type="submit" class="btn btn-primary">Submit</button>
+
+<?php echo Form::end() ?>
