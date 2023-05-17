@@ -37,6 +37,9 @@ use App\Core\Application;
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/logout">
                             Welcome <?php echo Application::$app->user->getDisplayName() ?>
                             (logout)
