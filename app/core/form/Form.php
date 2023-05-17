@@ -6,10 +6,10 @@ use App\Core\Model;
 
 class Form
 {
-    public static function begin(string $action, string $method)
+    public static function begin(string $action, string $method): Form
     {
         echo sprintf('<form action="%s" method="%s">', $action, $method);
-        return new Form;
+        return new Form();
     }
 
     public static function end()

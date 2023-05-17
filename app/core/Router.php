@@ -9,13 +9,15 @@ class Router
 {
     protected array $routes = [];
     private Request $request;
+    private Response $response;
 
     /**
      * @param Request $request
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request, Response $response)
     {
         $this->request = $request;
+        $this->response = $response;
     }
 
     public function get($path, $callback)
@@ -48,7 +50,7 @@ class Router
             $callback[0] = Application::$app->controller;
         }
 
-        return call_user_func($callback, $this->request);
+        return call_user_func($callback, $this->request, $this->response);
     }
 
     public function renderView(string $view, array $params = [])
