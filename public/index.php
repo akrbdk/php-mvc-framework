@@ -21,7 +21,7 @@ $app = new Application(dirname(__DIR__), $config);
 
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/contacts', [SiteController::class, 'contacts']);
-$app->router->post('/contacts', [SiteController::class, 'handleContacts']);
+$app->router->post('/contacts', [SiteController::class, 'contacts']);
 
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->post('/login', [AuthController::class, 'login']);

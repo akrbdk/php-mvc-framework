@@ -1,6 +1,9 @@
 <?php
 
 /** @var $exception \Exception */
+/** @var $this \App\Core\View */
+
+$this->title = 'Error page';
 
 ?>
 
