@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Core\Application;
+use Akrbdk\PhpMvcCore\Application;
 use Akrbdk\PhpMvcCore\Controller;
 use Akrbdk\PhpMvcCore\Request;
 use App\models\ContactForm;

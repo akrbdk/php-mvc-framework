@@ -1,6 +1,6 @@
 <?php
 
-/** @var $this \App\Core\View */
+/** @var $this \Akrbdk\PhpMvcCore\View */
 
 use Akrbdk\PhpMvcCore\Application;
 

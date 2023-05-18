@@ -1,7 +1,7 @@
 <?php
 
-/** @var $name \App\Core\View */
-/** @var $this \App\Core\View */
+/** @var $name \Akrbdk\PhpMvcCore\View */
+/** @var $this \Akrbdk\PhpMvcCore\View */
 
 $this->title = 'Home page';
 

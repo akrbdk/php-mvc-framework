@@ -1,7 +1,7 @@
 <?php
 
 /** @var $model User */
-/** @var $this \App\Core\View */
+/** @var $this \Akrbdk\PhpMvcCore\View */
 
 $this->title = 'Register';
 

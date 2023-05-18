@@ -1,4 +1,4 @@
-<?php /** @var $this \App\Core\View */ ?>
+<?php /** @var $this \Akrbdk\PhpMvcCore\View */ ?>
 
 <!doctype html>
 <html lang="en">

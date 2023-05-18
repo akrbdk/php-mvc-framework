@@ -1,7 +1,7 @@
 <?php
 
 /** @var $exception \Exception */
-/** @var $this \App\Core\View */
+/** @var $this \Akrbdk\PhpMvcCore\View */
 
 $this->title = 'Error page';
 

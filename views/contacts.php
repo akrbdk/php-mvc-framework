@@ -1,10 +1,10 @@
 <?php
 
 /** @var $model \App\models\ContactForm */
-/** @var $this \App\Core\View */
+/** @var $this \Akrbdk\PhpMvcCore\View */
 
-use App\Core\Form\Form;
-use App\Core\Form\TextareaField;
+use Akrbdk\PhpMvcCore\Form\Form;
+use Akrbdk\PhpMvcCore\Form\TextareaField;
 
 $this->title = 'Contacts page';
 
