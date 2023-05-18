@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "akrbdk/php-mvc-framework-core",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akrbdk/php-mvc-framework-core.git",
-                "reference": "9812fd6bdd1fed383fad612280e0e237a58cbd1a"
+                "reference": "9b101610e1ab641f751838e96530383612faf7b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akrbdk/php-mvc-framework-core/zipball/9812fd6bdd1fed383fad612280e0e237a58cbd1a",
-                "reference": "9812fd6bdd1fed383fad612280e0e237a58cbd1a",
+                "url": "https://api.github.com/repos/akrbdk/php-mvc-framework-core/zipball/9b101610e1ab641f751838e96530383612faf7b8",
+                "reference": "9b101610e1ab641f751838e96530383612faf7b8",
                 "shasum": ""
             },
             "type": "library",
@@ -35,9 +35,9 @@
             ],
             "support": {
                 "issues": "https://github.com/akrbdk/php-mvc-framework-core/issues",
-                "source": "https://github.com/akrbdk/php-mvc-framework-core/tree/v1.0.2"
+                "source": "https://github.com/akrbdk/php-mvc-framework-core/tree/v1.0.3"
             },
-            "time": "2023-05-18T18:27:15+00:00"
+            "time": "2023-05-18T18:49:10+00:00"
         },
         {
             "name": "graham-campbell/result-type",
