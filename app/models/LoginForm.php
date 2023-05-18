@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use App\Core\Application;
-use App\Core\Model;
+use Akrbdk\PhpMvcCore\Application;
+use Akrbdk\PhpMvcCore\Model;
 
 class LoginForm extends Model
 {

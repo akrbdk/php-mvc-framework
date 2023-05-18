@@ -2,7 +2,7 @@
 
 namespace Migrations;
 
-use App\Core\Application;
+use Akrbdk\PhpMvcCore\Application;
 
 class m0001_initial
 {

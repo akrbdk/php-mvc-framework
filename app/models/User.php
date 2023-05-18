@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Core\UserModel;
+use Akrbdk\PhpMvcCore\UserModel;
 
 class User extends UserModel
 {

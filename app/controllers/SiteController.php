@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Core\Controller;
-use App\Core\Request;
+use Akrbdk\PhpMvcCore\Controller;
+use Akrbdk\PhpMvcCore\Request;
 
 class SiteController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Application;
+use Akrbdk\PhpMvcCore\Application;
 
 require_once realpath(__DIR__ . '/vendor/autoload.php');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);

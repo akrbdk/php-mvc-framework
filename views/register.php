@@ -2,7 +2,7 @@
 
 <h1>Create an account</h1>
 
-<?php use App\Core\Form\Form;
+<?php use Akrbdk\PhpMvcCore\Form\Form;
 use App\Models\User;
 
 $form = Form::begin('', 'post') ?>

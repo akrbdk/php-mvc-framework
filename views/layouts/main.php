@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Application;
+use Akrbdk\PhpMvcCore\Application;
 
 ?>
 

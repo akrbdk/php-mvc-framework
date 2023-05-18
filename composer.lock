@@ -4,8 +4,41 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "243057c428338a0a5671c5fdb9284bde",
+    "content-hash": "1b6ce46ccb9d6d16859762a3a2eb84d5",
     "packages": [
+        {
+            "name": "akrbdk/php-mvc-framework-core",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/akrbdk/php-mvc-framework-core.git",
+                "reference": "5bb08d6f007c8c11597cf116f2579ef4f05f9787"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/akrbdk/php-mvc-framework-core/zipball/5bb08d6f007c8c11597cf116f2579ef4f05f9787",
+                "reference": "5bb08d6f007c8c11597cf116f2579ef4f05f9787",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Akrbdk\\PhpMvcCore\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "alexander.karabudka",
+                    "email": "sanyakarabudka@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/akrbdk/php-mvc-framework-core/issues",
+                "source": "https://github.com/akrbdk/php-mvc-framework-core/tree/v1.0.1"
+            },
+            "time": "2023-05-18T18:15:19+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.1.1",
@@ -486,5 +519,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

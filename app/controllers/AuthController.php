@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-use App\Core\Application;
-use App\Core\Controller;
-use App\Core\Middlewares\AuthMiddleware;
-use App\Core\Request;
+use Akrbdk\PhpMvcCore\Application;
+use Akrbdk\PhpMvcCore\Controller;
+use Akrbdk\PhpMvcCore\Middlewares\AuthMiddleware;
+use Akrbdk\PhpMvcCore\Request;
 use App\Models\LoginForm;
 use App\Models\User;
 
