@@ -1,4 +1,11 @@
-<?php /** @var $model User */ ?>
+<?php
+
+/** @var $model User */
+/** @var $this \App\Core\View */
+
+$this->title = 'Login';
+
+?>
 
 <h1>Login</h1>
 

@@ -1,4 +1,11 @@
-<?php /** @var $model User */ ?>
+<?php
+
+/** @var $model User */
+/** @var $this \App\Core\View */
+
+$this->title = 'Register';
+
+?>
 
 <h1>Create an account</h1>
 

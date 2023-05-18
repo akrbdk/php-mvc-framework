@@ -2,8 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Core\Application;
 use Akrbdk\PhpMvcCore\Controller;
 use Akrbdk\PhpMvcCore\Request;
+use App\models\ContactForm;
 
 class SiteController extends Controller
 {
@@ -16,21 +18,22 @@ class SiteController extends Controller
         return $this->render('home', $params);
     }
 
-    public function contacts()
+    public function contacts(Request $request)
     {
-        return $this->render('contacts');
-    }
+        $contactsForm = new ContactForm();
 
-    public function handleContacts(Request $request)
-    {
+        if ($request->isPost()) {
+            $contactsForm->loadData($request->getBody());
 
-        $body = $request->getBody();
+            if ($contactsForm->validate() && $contactsForm->send()) {
+                Application::$app->session->setFlash('success', 'Thank you for contacting us.');
+                $request->redirect('/contacts');
+                return;
+            }
+        }
 
-        echo '<pre>';
-        print_r($body);
-        echo '</pre>';
-        die();
-
-        return 'handling request data';
+        return $this->render('contacts', [
+            'model' => $contactsForm
+        ]);
     }
 }
